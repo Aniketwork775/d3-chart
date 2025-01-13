@@ -88,7 +88,7 @@ export class VerticalLayoutComponent implements OnInit{
     }]
     
 };
-private rectW = 60;
+private rectW = 30;
 private rectH = 30;
   svg: any;
   margin = { top: 100, right: 30, bottom: 50, left: 30 };
@@ -152,6 +152,18 @@ private rectH = 30;
     // Assign the x and y position for the nodes
     const treeData = this.treemap(this.root);
   
+    const tooltip = d3
+    .select('body')
+    .append('div')
+    .attr('class', 'tooltip') // Add a CSS class for styling
+    .style('position', 'absolute')
+    .style('opacity', 0)
+    .style('background', '#fff')
+    .style('border', '1px solid #ccc')
+    .style('padding', '5px')
+    .style('border-radius', '5px')
+    .style('font-size', '12px')
+    .style('pointer-events', 'none'); 
     // Compute the new tree layout.
     const nodes = treeData.descendants();
     const links = treeData.descendants().slice(1);
@@ -180,28 +192,48 @@ private rectH = 30;
       .attr('transform', (d: any) => {
         return 'translate(' + source.x0 + ',' + source.y0 + ')';
       })
-      .on('click', (_: any, d: any) => this.click(d));
+      .on('mouseover', (event: MouseEvent, d: any) => {
+        tooltip
+          .style('opacity', 1)
+          .style('background-color','#68605F')
+          .style('color','white')
+          .style('font-weight','bold')
+          .html(`DEPT. NAME: ${d.data.name}<br>
+        ID: ${d.id || 'N/A'}<br>
+        NUMBER OF DECOY: ${d.data.children?.filter((child: any) => child.img === 'decoy.png').length || 0}<br>
+        NUMBER OF AGENTS: ${d.data.children?.filter((child: any) => child.img === 'Agent.png').length || 0}`)
+          .style('left', event.pageX + 10 + 'px')
+          .style('top', event.pageY +10+ 'px');
+      })
+      .on('mouseout', () => tooltip.style('opacity', 0))
+      // .on('mousemove', (event: MouseEvent) =>
+      //   tooltip
+      //     .style('left', event.pageX + 10 + 'px')
+      //     .style('top', event.pageY + 'px')
+      // )
+      .on('click', (_: MouseEvent, d: any) => this.click(d));
   
     // Add rectangle for the nodes
-    nodeEnter.append('rect')
-      .attr('width', this.rectW)
-      .attr('height', this.rectH)
-      .attr('stroke', 'black')
-      .attr('stroke-width', 1)
-      .attr('cursor', 'pointer')
-      .style('fill', (d: any) => d.data._children ?  'lightsteelblue' : '#fff');
+    nodeEnter.append('image')
+    .attr('xlink:href', (d: any) => '/assets/img/'+d.data.img) // Use the `img` property
+    .attr('x', -this.rectW / 2) // Center the image horizontally
+    .attr('y', -this.rectH / 2) // Center the image vertically
+    .attr('width', this.rectW*2) // Set image width
+    .attr('height', this.rectH)
+    .append('title') // Add the tooltip
+    .text((d: any) => d.data.name);
   
     // Add labels for the nodes
-    nodeEnter
-      .append('text')
-      .attr('x', this.rectW / 2)
-      .attr('y', this.rectH / 2)
-      .attr('dy', '.35em')
-      .attr('font', '2px sans-serif')
-      .attr('font-size', '10px')
-      .attr('text-anchor', 'middle')
-      .attr('cursor', 'pointer')
-      .text((d: any) => d.data.name);
+    // nodeEnter
+    //   .append('text')
+    //   .attr('x', this.rectW / 2)
+    //   .attr('y', this.rectH / 2)
+    //   .attr('dy', '.35em')
+    //   .attr('font', '2px sans-serif')
+    //   .attr('font-size', '10px')
+    //   .attr('text-anchor', 'middle')
+    //   .attr('cursor', 'pointer')
+    //   .text((d: any) => d.data.name);
   
     // Update
     const nodeUpdate = nodeEnter.merge(node);
@@ -285,9 +317,13 @@ private rectH = 30;
   
   diagonal(s: any, d: any) {
     // Update path for top-to-bottom layout
-    const path = `M${d.x+(this.rectW/2)},${d.y+this.rectH}
-    C${((d.x + this.rectW + s.x) / 2)},${d.y}
-     ${((d.x +this.rectW + s.x) / 2)},${s.y}
+    // const path = `M${d.x+(this.rectW/2)},${d.y+this.rectH}
+    // C${((d.x + this.rectW + s.x) / 2)},${d.y}
+    //  ${((d.x +this.rectW + s.x) / 2)},${s.y}
+    //  ${s.x+(this.rectW/2)},${s.y}`;
+    const path = `M${d.x+(this.rectW/2)},${d.y+this.rectH/2}
+    C${(d.x + this.rectW/2)},${(s.y+d.y)/2 +this.rectH}
+     ${(s.x +this.rectW/ 2)},${(s.y+d.y)/2 +this.rectH}
      ${s.x+(this.rectW/2)},${s.y}`;
     return path;
   }
