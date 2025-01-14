@@ -1,0 +1,132 @@
+.bg-dark{
+    // background-color: #0a0d16 !important;
+    color: #111725;
+}
+.mr-right{
+  margin-right: 5px;
+  margin-left: auto;
+}
+.txt-color{
+  color: white;
+  cursor: pointer;
+}
+.nav-link{
+    cursor: pointer;
+}
+.dropdown-menu{
+  font-size: small;
+}
+.dropdown-menu1{
+  font-size: small;
+}
+.submenu{
+  padding: 0.25rem 1.5rem !important;
+}
+.dropdown-item{
+    cursor: pointer;
+    color: inherit;
+}
+.colo1{
+  font-size:15px; 
+  color: #fdb927;
+}
+.colo2{
+  font-size:25px; 
+  color: #fdb927;
+}
+::ng-deep {
+  .navbar-collapse .dropdown-menu{
+    // right: 0 !important;
+    left: unset !important;
+  }
+  .navbar-collapse .dropdown-menu1{
+    right: 0 !important;
+    left: unset !important;
+  }
+  .navbar-collapse {
+    background-color: transparent;
+    z-index: 1000;
+    padding:10px ;
+  }
+}
+.nav1{
+  height:70px;
+  font-size: 16px;
+  background-color: #0a0d16;
+  border-bottom: 1px solid #3b3b3b;
+}
+.navbar-brand{
+  // font-family: auto;
+  font-size: x-large;
+  color: #DAA520;
+}
+.headingdesign{
+  color: #fdb927;
+  font-size: 26px;
+}
+.mr-right{
+  margin: auto;
+  margin-right: 10px;
+}
+  .nav-item-active{
+    text-shadow:0 0px 5px cyan , 0 0px 10px goldenrod;
+  }
+  // .nav-link{
+  //   margin-left: 10px;
+  // }
+  .dropdown-menu{
+    background-color: #0a0d16;
+  color: white;
+  }
+
+  .dropdown-menu1{
+    background-color: #0a0d16;
+  color: white;
+  }
+
+  .dropdown-item:hover{
+    background-color: white !important;
+  color: black !important;
+  }
+  .dropdown-divider{
+    border-top: 1px solid rgba(16, 16, 72, 0.971) !important;
+  }
+  .icon-col{
+    color:#fdb927;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+.notification {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.button__badge {
+  position: absolute;
+  padding: 1px 7px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  top: -2px;
+  right: 0px;
+}
+@media screen and (max-width: 800px) {
+  .navbar-collapse{
+      background-color: #0a0d16 !important;
+  }
+}
+
+  .new{
+    margin-right: -80%;
+    // margin-top: -20%;
+  }

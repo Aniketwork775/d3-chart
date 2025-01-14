@@ -103,7 +103,7 @@ export class HorizontalLayoutComponent implements OnInit{
     this.svg = d3
       .select('#d3noob')
       .append('svg')
-      .attr('viewBox','0 0 2000 3500')
+      .attr('viewBox','0 0 2000 3800')
       .append('g')
       .attr(
         'transform',
@@ -138,7 +138,7 @@ export class HorizontalLayoutComponent implements OnInit{
     // Normalize for fixed-depth.
     nodes.forEach((d: any) => {
       d.y = d.depth * 400;
-      // d.x = d.weight * 40;
+      d.x = d.x * 1.2;
     });
 
     // ****************** Nodes section ***************************
