@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
-
+import * as jsondata from 'src/assets/data/flare-2.json'
 @Component({
   selector: 'app-vertical-layout',
   templateUrl: './vertical-layout.component.html',
@@ -122,9 +122,9 @@ private rectH = 30;
     this.root.x0 = this.height / 2;
     this.root.y0 = 0;
     // Collapse after the second level
-    this.root.children.forEach((d:any) => {
-      this.collapse(d);
-    });
+    // this.root.children.forEach((d:any) => {
+    //   this.collapse(d);
+    // });
 
     this.update(this.root);
   }
@@ -220,7 +220,7 @@ private rectH = 30;
     .attr('y', -this.rectH / 2) // Center the image vertically
     .attr('width', this.rectW*2) // Set image width
     .attr('height', this.rectH)
-    .append('title') // Add the tooltip
+    // .append('title') // Add the tooltip
     .text((d: any) => d.data.name);
   
     // Add labels for the nodes
@@ -322,7 +322,7 @@ private rectH = 30;
     //  ${((d.x +this.rectW + s.x) / 2)},${s.y}
     //  ${s.x+(this.rectW/2)},${s.y}`;
     const path = `M${d.x+(this.rectW/2)},${d.y+this.rectH/2}
-    C${(d.x + this.rectW/2)},${(s.y+d.y)/2 +this.rectH}
+    C ${(d.x + this.rectW/2)},${(s.y+d.y)/2 +this.rectH}
      ${(s.x +this.rectW/ 2)},${(s.y+d.y)/2 +this.rectH}
      ${s.x+(this.rectW/2)},${s.y}`;
     return path;

@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HorizontalLayoutComponent } from './tree-chart/horizontal-layout/horizontal-layout.component';
 import { VerticalLayoutComponent } from './tree-chart/vertical-layout/vertical-layout.component';
+import { HeaderComponent } from './header/header.component';
+import { CircleLayoutComponent } from './tree-chart/circle-layout/circle-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HorizontalLayoutComponent,
-    VerticalLayoutComponent
+    VerticalLayoutComponent,
+    HeaderComponent,
+    CircleLayoutComponent
   ],
   imports: [
     BrowserModule,
