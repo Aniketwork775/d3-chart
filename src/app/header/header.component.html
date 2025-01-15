@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark  headerTheme nav1">
     <span class="navbar-brand nav-link">
         <!-- <img width="50px" height="50px" src="{{assetPath}}/images_and_logos/cdac_logo.png" alt="C-DAC Logo"> -->
-        <!-- <img width="250px" height="70px" src="{{assetPath}}/images_and_logos/ntsap.png" alt="CTMS Logo"> -->
+        <img width="100px" height="50px" src="{{assetPath}}/logo/logo.png" alt="Art D3 Logo">
     </span>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@
                         href="#/layout"
                         [ngClass]="{'nav-item-active': currentComponent  == 'layout'}"><i
                             class="fa fa-pie-chart icon-col"></i>&nbsp;Horizontal tree</a>
-                    <!-- <div *ngIf="userType != 'user' " class="dropdown-divider"></div> -->
-                    <!-- <a *ngIf="userType != 'user' " class="dropdown-item" (click)="navigation('indiaips')"
-                        href="#/dashboard/indiaips" [ngClass]="{'nav-item-active': currentComponent  == 'indiaips'}"><i
-                            class="fa fa-pie-chart icon-col"></i>&nbsp;Attacker IP's</a> -->
+                    <div *ngIf="userType != 'user' " class="dropdown-divider"></div>
+                    <a *ngIf="userType != 'user' " class="dropdown-item" (click)="navigation('circle')"
+                        href="#/circle" [ngClass]="{'nav-item-active': currentComponent  == 'cicle'}"><i
+                            class="fa fa-pie-chart icon-col"></i>&nbsp;Circle Tree</a>
 
 
                 </div>

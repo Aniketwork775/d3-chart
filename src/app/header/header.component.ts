@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   currentComponent:any;
+  assetPath='assets'
   userType:any;
   navigation(e:any){
 
