@@ -215,7 +215,7 @@ private rectH = 30;
   
     // Add rectangle for the nodes
     nodeEnter.append('image')
-    .attr('xlink:href', (d: any) => '/assets/img/'+d.data.img) // Use the `img` property
+    .attr('xlink:href', (d: any) => 'assets/img/'+d.data.img) // Use the `img` property
     .attr('x', -this.rectW / 2) // Center the image horizontally
     .attr('y', -this.rectH / 2) // Center the image vertically
     .attr('width', this.rectW*2) // Set image width
