@@ -10,11 +10,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-
-        <!-- <span class="headingdesign">{{heading}}</span> -->
-
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"
                     [ngClass]="{'nav-item-active': (( currentComponent  === '') || (currentComponent  == 'layout')  )}">
 
                     <i class="fa fa-pie-chart colo1" aria-hidden="true"></i> Tree Chart
@@ -25,27 +23,43 @@
                         [ngClass]="{'nav-item-active': currentComponent  == ''}"><i
                             class="fa fa fa-home icon-col"></i>&nbsp;Vertical Tree</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" (click)="navigation('layout')"
-                        href="#/layout"
+                    <a class="dropdown-item" (click)="navigation('layout')" href="#/layout"
                         [ngClass]="{'nav-item-active': currentComponent  == 'layout'}"><i
                             class="fa fa-pie-chart icon-col"></i>&nbsp;Horizontal tree</a>
-                    <div *ngIf="userType != 'user' " class="dropdown-divider"></div>
-                    <a *ngIf="userType != 'user' " class="dropdown-item" (click)="navigation('circle')"
-                        href="#/circle" [ngClass]="{'nav-item-active': currentComponent  == 'cicle'}"><i
-                            class="fa fa-pie-chart icon-col"></i>&nbsp;Circle Tree</a>
-
-
+                    <!-- <div *ngIf="userType != 'user' " class="dropdown-divider"></div>
+                    <a *ngIf="userType != 'user' " class="dropdown-item" (click)="navigation('circle')" href="#/circle"
+                        [ngClass]="{'nav-item-active': currentComponent  == 'cicle'}"><i
+                            class="fa fa-pie-chart icon-col"></i>&nbsp;Circle Tree</a> -->
                 </div>
 
 
             </li>
-            <!-- <li class="nav-item active">
-                <a class="nav-link" (click)="navigation('threatMap')" href="#/dashboard/threatMap"
-                    [ngClass]="{'nav-item-active': currentComponent  == 'threatMap'}"><i class="fa fa-map-marker colo1"
-                        aria-hidden="true"></i> Threat Map<span class="sr-only">(current)</span></a>
-            </li> -->
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"
+                    [ngClass]="{'nav-item-active': (( currentComponent  === 'circle') || (currentComponent  == 'radial')  )}">
 
-            </ul>
+                    <i class="fa fa-pie-chart colo1" aria-hidden="true"></i> Circle Chart
+                </a>
+                <div class="dropdown-menu drpd" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" (click)="navigation('circle')" href="#/circle"
+                        [ngClass]="{'nav-item-active': currentComponent  == 'circle'}"><i
+                            class="fa fa fa-home icon-col"></i>&nbsp;Circular Chart</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" (click)="navigation('layout')" href="#/radial"
+                        [ngClass]="{'nav-item-active': currentComponent  == 'radial'}"><i
+                            class="fa fa-pie-chart icon-col"></i>&nbsp;Radial Chart</a>
+                    <!-- <div *ngIf="userType != 'user' " class="dropdown-divider"></div>
+                    <a *ngIf="userType != 'user' " class="dropdown-item" (click)="navigation('circle')" href="#/circle"
+                        [ngClass]="{'nav-item-active': currentComponent  == 'cicle'}"><i
+                            class="fa fa-pie-chart icon-col"></i>&nbsp;Circle Tree</a> -->
+                </div>
+
+
+            </li>
+        </ul>
         <ul class="navbar-nav mr-right">
             <li class="nav-item active">
                 <!-- <a class="nav-link notification" routerLink="/notifications"

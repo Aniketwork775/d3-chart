@@ -1,0 +1,327 @@
+.rounded-circle{
+    border-radius: 2% !important;
+}
+
+.float-lt{
+    float:left;
+}
+
+.chart-box{
+    padding-right: 15px;
+    border-radius: 15px;
+    
+}
+.chartdivsec{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.float-rt{
+    float: right;
+}
+
+.loader {
+    border: 20px solid #E8AE00;
+    border-radius: 50%;
+    border-top: 20px solid grey;
+    width: 110px;
+    height: 110px;
+    margin-left:45% !important;
+    margin-top:80px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .load{
+    padding:10px;
+     height:380px;
+  }
+table, th, td {
+    margin-top: inherit;
+    width: -webkit-fill-available;
+  }
+  .mt-5, .my-5{
+     margin-top: 1rem!important
+ }
+.pch1{
+    height:20px;
+     width:20px;
+      cursor: pointer;
+}
+.pch2{
+    height:25px;
+     width:25px;
+      cursor: pointer;
+}
+.table-sec{
+    height: 291px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    // padding: 0.5rem;
+    // padding-top:0px ;
+    padding: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+
+.table td,th{
+    border-top:none;
+    padding: 0.35rem;
+
+}
+.pie{
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 0px;
+}
+.row{
+    margin-left: auto;
+    margin-right: auto;  
+}
+.colo{
+    font-weight: 500;
+    font-size: 18px;
+    color: #E8AE00;
+    font-family: "Merriweather" !important;
+}
+
+.table th{
+    color: #fdb927;
+    background-color: #4f4b70;
+    
+    padding: 10px;
+    vertical-align: middle;
+}
+.imgg{
+    height:18px;
+    width:34px;
+}
+.buttonn{
+    // border: 1px solid grey;
+    color: #E8AE00;
+    height:35px;
+    width:25px;
+    margin-top: 10px;
+    background-color: transparent;
+    padding: 0px;
+    float: right;
+}
+// .buttonnn{
+//     // border: 1px solid grey;
+//     color: #fdb927;
+//     height:35px;
+//     width:35px;
+//     margin-top: 10px;
+//     background-color: transparent;
+//     padding: 0px;
+//     float: left;
+// }
+::ng-deep .mat-button{
+    padding:0px !important;
+}
+::ng-deep .d1{
+    background-color: #111725;
+    color:white !important;
+}
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #302c46;
+ }
+ .table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #1f1d2e;
+ }
+
+ .loading-overlay {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height:300px;
+    background-color:transparent;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    z-index: 1000;
+  }
+  
+  .loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  .himgg{
+    height:28px;
+    width:34px;
+  }
+  
+  .label{
+    flex: 0 0 9%;
+    max-width: 9%;
+    padding-left: 20px;
+    padding-top: 1px;
+    background-color: black;
+  }
+  
+  .content {
+    padding-top: 15px;
+    flex: 0 0 89.5%;
+    max-width: 89.5%;
+    background-color: #26243d;
+  }
+
+  .pause {
+    flex: 0 0 1.5%;
+    max-width: 1.5%;
+    border-left: 3px dashed #797979;
+    background-color: black;
+}
+
+  .divider{
+    border: 1px dashed #525252;
+    width: 90%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  .hdivide{
+    border: 1px dashed #525252;
+    width: 90%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+.scrollDiv {
+  margin: 5px 6px;
+  overflow: hidden;
+  position: relative;
+  width: 99.5%;
+  border: 2px solid #595959;
+  border-radius: 15px; /* Set this to whatever width you need */
+}
+
+#scroll-container {
+  width: 100%;
+  white-space: nowrap; /* Prevent wrapping of content */
+  overflow: hidden;
+  position: relative;
+}
+
+#scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 120s linear infinite;
+}
+
+.scroll-list {
+  font-size: large;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style-type: circle;
+}
+
+.listrecord {
+  display: inline-block;
+  // margin-right: 50px; /* Adjust spacing between items */
+}
+
+@keyframes scrollLeft {
+  from {
+      transform: translateX(18%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+
+  .field-content1{
+    font-size: smaller;
+  }
+
+  .lineChart{
+    margin: 0;
+    padding: 0;
+  }
+
+  hr{
+    border:1px solid grey; ;
+  } 
+  li{
+    // padding-left: 20px;
+    margin-left: 40px;
+  }
+
+  #scroll-container:hover #scroll-text {
+    animation-play-state: paused;
+  }
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateY(100%); }
+    to { -moz-transform: translateY(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    to {
+      -moz-transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+
+  .highlighter{
+    color: burlywood;
+    font-style: italic;
+  }
+
+  .boxh{
+    border-right: 2px dashed #525252;
+    border-width:3px;
+  }
+
+  .highlighter1{
+    color: yellowgreen;
+  }
+
+
+
+
+  ::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the scrollbar */
+  }
+  
+  /* Style for the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Background color of the track */
+  }
+  
+  /* Style for the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: #f3efef; /* Color of the thumb */
+    border-radius: 10px; /* Roundness of the thumb */
+    border: 2px solid transparent; /* Space around the thumb */
+    background-clip: content-box; /* Prevent border from hiding part of the thumb */
+  }
