@@ -162,7 +162,7 @@ export class HorizontalLayoutComponent implements OnInit{
 
     // Add Circle for the nodes
     nodeEnter.append('image')
-    .attr('xlink:href', (d: any) =>d.data.img ? 'assets/img/DSM.png' : d.data.children ? '/assets/img/folder.png' : '/assets/img/decoy.png') // Use the `img` property
+    .attr('xlink:href', (d: any) =>d.data.img ? 'assets/img/DSM.png' : d.data.children ? 'assets/img/folder.png' : 'assets/img/decoy.png') // Use the `img` property
     .attr('x', -15) // Center the image horizontally
     .attr('y',-15) // Center the image vertically
     .attr('width', 30) // Set image width

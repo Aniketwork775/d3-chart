@@ -10,86 +10,6 @@ import * as jsondata from 'src/assets/data/flare-2.json'
 export class CircleLayoutComponent implements OnInit{
   title = 'tree-chart';
   private treeData :any;
-//   private treeData :any= {
-//     name: "flare",
-//     img:'DSM.png',
-//     children:[{
-//       name:"computer1",
-//       img:'DEM.png',
-//       children:[{
-//         name:"display11",
-//         img:'decoy.png'
-//       },{
-//         name:"display12",
-//         img:'Agent.png'
-//       },{
-//         name:"display13",
-//         img:'Agent.png'
-//       },{
-//         name:"display14",
-//         img:'Agent.png'
-//       },{
-//         name:"display15",
-//         img:'Agent.png'
-//       },{
-//         name:"display16",
-//         img:'Agent.png'
-//       },{
-//         name:"display17",
-//         img:'Agent.png'
-//       },{
-//         name:"display18",
-//         img:'Agent.png'
-//       },{
-//         name:"display19",
-//         img:'Agent.png'
-//       },{
-//         name:"display20",
-//         img:'Agent.png'
-//       }]
-//     },{
-//       name:"computer2",
-//       img:'DEM.png',
-//       children:[{
-//         name:"display21",
-//         img:'decoy.png'
-//       },{
-//         name:"display22",
-//         img:'Agent.png'
-//       },{
-//         name:"display23",
-//         img:'Agent.png'
-//       },{
-//         name:"display24",
-//         img:'Agent.png'
-//       },{
-//         name:"display25",
-//         img:'Agent.png'
-//       },{
-//         name:"display26",
-//         img:'Agent.png'
-//       },{
-//         name:"display27",
-//         img:'Agent.png'
-//       },{
-//         name:"display28",
-//         img:'Agent.png'
-//       },{
-//         name:"display29",
-//         img:'Agent.png'
-//       },{
-//         name:"display30",
-//         img:'Agent.png'
-//       },{
-//         name:"display31",
-//         img:'Agent.png'
-//       },{
-//         name:"display32",
-//         img:'Agent.png'
-//       }]
-//     }]
-    
-// };
   svg: any;
   margin = { top: 100, right: 30, bottom: 50, left: 130 };
   duration = 750;
@@ -140,7 +60,7 @@ export class CircleLayoutComponent implements OnInit{
     this.svg.append("g")
 .selectAll()
 .data(this.root.descendants()).join('image')
-    .attr('xlink:href', (d: any) =>d.data.img ? 'assets/img/DSM.png' : d.data.children ? '/assets/img/folder.png' : '/assets/img/decoy.png') // Use the `img` property
+    .attr('xlink:href', (d: any) =>d.data.img ? 'assets/img/DSM.png' : d.data.children ? 'assets/img/folder.png' : 'assets/img/decoy.png') // Use the `img` property
     .attr('x', -15) // Center the image horizontally
     .attr('y',-15) // Center the image vertically
     .attr('width', 30) // Set image width
