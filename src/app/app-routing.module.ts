@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HorizontalLayoutComponent } from './tree-chart/horizontal-layout/horizontal-layout.component';
 import { VerticalLayoutComponent } from './tree-chart/vertical-layout/vertical-layout.component';
 import { CircleLayoutComponent } from './tree-chart/circle-layout/circle-layout.component';
+import { RadialLayoutComponent } from './tree-chart/radial-layout/radial-layout.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
   {
     path:'circle',component:CircleLayoutComponent
   },
+  {
+    path:'radial',component:RadialLayoutComponent
+  }
 
 ];
 

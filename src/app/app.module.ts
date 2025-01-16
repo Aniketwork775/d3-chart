@@ -7,6 +7,8 @@ import { HorizontalLayoutComponent } from './tree-chart/horizontal-layout/horizo
 import { VerticalLayoutComponent } from './tree-chart/vertical-layout/vertical-layout.component';
 import { HeaderComponent } from './header/header.component';
 import { CircleLayoutComponent } from './tree-chart/circle-layout/circle-layout.component';
+import { DashoardComponent } from './dashoard/dashoard.component';
+import { RadialLayoutComponent } from './tree-chart/radial-layout/radial-layout.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CircleLayoutComponent } from './tree-chart/circle-layout/circle-layout.
     HorizontalLayoutComponent,
     VerticalLayoutComponent,
     HeaderComponent,
-    CircleLayoutComponent
+    CircleLayoutComponent,
+    DashoardComponent,
+    RadialLayoutComponent
   ],
   imports: [
     BrowserModule,

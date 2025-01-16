@@ -1,95 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
-import * as jsondata from 'src/assets/data/flare-2.json'
+import * as jsondata from 'src/assets/data/flare-2.json';
 
 @Component({
-  selector: 'app-circle-layout',
-  templateUrl: './circle-layout.component.html',
-  styleUrls: ['./circle-layout.component.scss']
+  selector: 'app-radial-layout',
+  templateUrl: './radial-layout.component.html',
+  styleUrls: ['./radial-layout.component.scss']
 })
-export class CircleLayoutComponent implements OnInit{
+export class RadialLayoutComponent implements OnInit{
   title = 'tree-chart';
   private treeData :any;
-//   private treeData :any= {
-//     name: "flare",
-//     img:'DSM.png',
-//     children:[{
-//       name:"computer1",
-//       img:'DEM.png',
-//       children:[{
-//         name:"display11",
-//         img:'decoy.png'
-//       },{
-//         name:"display12",
-//         img:'Agent.png'
-//       },{
-//         name:"display13",
-//         img:'Agent.png'
-//       },{
-//         name:"display14",
-//         img:'Agent.png'
-//       },{
-//         name:"display15",
-//         img:'Agent.png'
-//       },{
-//         name:"display16",
-//         img:'Agent.png'
-//       },{
-//         name:"display17",
-//         img:'Agent.png'
-//       },{
-//         name:"display18",
-//         img:'Agent.png'
-//       },{
-//         name:"display19",
-//         img:'Agent.png'
-//       },{
-//         name:"display20",
-//         img:'Agent.png'
-//       }]
-//     },{
-//       name:"computer2",
-//       img:'DEM.png',
-//       children:[{
-//         name:"display21",
-//         img:'decoy.png'
-//       },{
-//         name:"display22",
-//         img:'Agent.png'
-//       },{
-//         name:"display23",
-//         img:'Agent.png'
-//       },{
-//         name:"display24",
-//         img:'Agent.png'
-//       },{
-//         name:"display25",
-//         img:'Agent.png'
-//       },{
-//         name:"display26",
-//         img:'Agent.png'
-//       },{
-//         name:"display27",
-//         img:'Agent.png'
-//       },{
-//         name:"display28",
-//         img:'Agent.png'
-//       },{
-//         name:"display29",
-//         img:'Agent.png'
-//       },{
-//         name:"display30",
-//         img:'Agent.png'
-//       },{
-//         name:"display31",
-//         img:'Agent.png'
-//       },{
-//         name:"display32",
-//         img:'Agent.png'
-//       }]
-//     }]
-    
-// };
   svg: any;
   margin = { top: 100, right: 30, bottom: 50, left: 130 };
   duration = 750;
@@ -97,8 +17,8 @@ export class CircleLayoutComponent implements OnInit{
   width: number=220
   height: number=3000;
   cx=928*0.5;
-  cy=928*0.54;
-  radius = Math.min(928) - 80;
+  cy=928*0.59;
+  radius = Math.min(928) - 30;
   root: any;
 
   i = 0;
@@ -116,7 +36,7 @@ export class CircleLayoutComponent implements OnInit{
       );
 
     // declares a tree layout and assigns the size
-    this.treemap = d3.cluster()
+    this.treemap = d3.tree()
     .size([2 * Math.PI, this.radius])
     .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth);
 
@@ -340,3 +260,4 @@ return this.svg.node();
     return path;
   }
 }
+

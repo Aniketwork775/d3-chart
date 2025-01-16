@@ -1,5 +1,6 @@
 {
  "name": "flare",
+ "img":"DSM.png",
  "children": [
   {
    "name": "analytics",
