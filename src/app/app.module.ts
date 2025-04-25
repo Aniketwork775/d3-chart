@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { CircleLayoutComponent } from './tree-chart/circle-layout/circle-layout.component';
 import { DashoardComponent } from './dashoard/dashoard.component';
 import { RadialLayoutComponent } from './tree-chart/radial-layout/radial-layout.component';
+import { TangleChartComponent } from './tree-chart/tangle-chart/tangle-chart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RadialLayoutComponent } from './tree-chart/radial-layout/radial-layout.
     HeaderComponent,
     CircleLayoutComponent,
     DashoardComponent,
-    RadialLayoutComponent
+    RadialLayoutComponent,
+    TangleChartComponent
   ],
   imports: [
     BrowserModule,

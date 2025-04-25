@@ -4,6 +4,7 @@ import { HorizontalLayoutComponent } from './tree-chart/horizontal-layout/horizo
 import { VerticalLayoutComponent } from './tree-chart/vertical-layout/vertical-layout.component';
 import { CircleLayoutComponent } from './tree-chart/circle-layout/circle-layout.component';
 import { RadialLayoutComponent } from './tree-chart/radial-layout/radial-layout.component';
+import { TangleChartComponent } from './tree-chart/tangle-chart/tangle-chart.component';
 
 const routes: Routes = [
   {
@@ -17,8 +18,10 @@ const routes: Routes = [
   },
   {
     path:'radial',component:RadialLayoutComponent
+  },
+  {
+    path:'tangle',component:TangleChartComponent
   }
-
 ];
 
 @NgModule({
